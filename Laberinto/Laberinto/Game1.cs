@@ -13,11 +13,11 @@ namespace Laberinto
         SpriteBatch spriteBatch;
         //Texturas
         Texture2D Balon, Pared_lateral, Pared_Abajo, Pared_Arriba, Pared_LateralIz, Pared_LateralDe, Pared2, Pared3, Pared4, Pared5;
-
+        Texture2D Pared6;
 
         //Rectangulos
         Rectangle Posicion_ParedAbajo, Posicion_Balon, Posicion_Pared1, Posicion_ParedArriba, Posicion_ParedLateralIz, Posicion_ParedLateralDe, Posicion_Pared2;
-        Rectangle Posicion_Pared3, Posicion_Pared4, Posicion_Pared5;
+        Rectangle Posicion_Pared3, Posicion_Pared4, Posicion_Pared5, Posicion_Pared6;
 
         
         int VelocidadBalon;
@@ -99,8 +99,9 @@ namespace Laberinto
             Posicion_ParedLateralDe = new Rectangle(780, 0, 20, 780);
             Posicion_Pared2 = new Rectangle(60, 60, 20, 80);
             Posicion_Pared3 = new Rectangle(130, 60, 20, 140);
-            Posicion_Pared4 = new Rectangle(60, 180, 130, 20);
-            Posicion_Pared5 = new Rectangle(60, 180, 20, 130);
+            Posicion_Pared4 = new Rectangle(60, 180, 180, 20);
+            Posicion_Pared5 = new Rectangle(60, 180, 20, 80);
+            Posicion_Pared6 = new Rectangle(60, 245, 100, 20);
             VelocidadBalon = 2;
             base.Initialize();
         }
@@ -123,6 +124,7 @@ namespace Laberinto
             Pared3 = Content.Load<Texture2D>("Pared3");
             Pared4 = Content.Load<Texture2D>("Pared4");
             Pared5 = Content.Load<Texture2D>("Pared5");
+            Pared6 = Content.Load<Texture2D>("Pared6");
             // TODO: use this.Content to load your game content here
         }
 
@@ -157,7 +159,7 @@ namespace Laberinto
                 Teclado2();
             }
             
-            if(Posicion_Balon.Intersects(Posicion_Pared3) || Posicion_Balon.Intersects(Posicion_Pared4) || Posicion_Balon.Intersects(Posicion_Pared5))
+            if(Posicion_Balon.Intersects(Posicion_Pared3) || Posicion_Balon.Intersects(Posicion_Pared4) || Posicion_Balon.Intersects(Posicion_Pared5) || Posicion_Balon.Intersects(Posicion_Pared6))
             {
                 Teclado2();
             }
@@ -187,6 +189,7 @@ namespace Laberinto
             spriteBatch.Draw(Pared3, Posicion_Pared3, Color.White);
             spriteBatch.Draw(Pared4, Posicion_Pared4, Color.White);
             spriteBatch.Draw(Pared5, Posicion_Pared5, Color.White);
+            spriteBatch.Draw(Pared6, Posicion_Pared6, Color.White);
             spriteBatch.End();
 
             // TODO: Add your drawing code here
