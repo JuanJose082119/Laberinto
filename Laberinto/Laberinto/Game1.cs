@@ -92,7 +92,7 @@ namespace Laberinto
             // TODO: Add your initialization logic here
 
             Posicion_Balon = new Rectangle(0, 21, 35, 35);
-            Posicion_Pared1 = new Rectangle(0,120 , 60, 20);
+            Posicion_Pared1 = new Rectangle(0, 120, 60, 20);
             Posicion_ParedAbajo = new Rectangle(0, 460, 800, 20);
             Posicion_ParedArriba = new Rectangle(0, 0, 800, 20);
             Posicion_ParedLateralIz = new Rectangle(0, 60, 20, 750);
@@ -103,6 +103,7 @@ namespace Laberinto
             Posicion_Pared5 = new Rectangle(60, 180, 20, 80);
             Posicion_Pared6 = new Rectangle(60, 245, 100, 20);
             VelocidadBalon = 2;
+            //Hola
             base.Initialize();
         }
 
